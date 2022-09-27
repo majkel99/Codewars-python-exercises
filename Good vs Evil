@@ -1,0 +1,17 @@
+def good_vs_evil(good, evil):
+    good_forces = [1, 2, 3, 3, 4, 10]
+    evil_forces=[1, 2, 2, 2, 3, 5, 10]
+    forces_g = good.split(" ")
+    forces_e = evil.split(" ")
+    sum_good = 0
+    sum_evil=0
+    for i in range(len(forces_g)):
+        sum_good += int(forces_g[i]) * good_forces[i]
+    for i in range(len(forces_e)):
+        sum_evil += int(forces_e[i]) * evil_forces[i]
+    if(sum_evil>sum_good):
+        return 'Battle Result: Evil eradicates all trace of Good'
+    elif(sum_evil<sum_good):
+        return 'Battle Result: Good triumphs over Evil'
+    else:
+        return 'Battle Result: No victor on this battle field'
