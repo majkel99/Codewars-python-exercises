@@ -1,0 +1,9 @@
+def find_it(seq):
+    count = 0
+    for num in seq:
+        for num2 in seq:
+            if num == num2:
+                count += 1
+        if count % 2 != 0:
+            return num
+        count = 0
