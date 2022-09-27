@@ -1,0 +1,6 @@
+def sort_array(source_array):
+    for i in range(len(source_array)):
+        for j in range(len(source_array)):
+            if source_array[i] % 2 != 0 and source_array[j] % 2 != 0 and source_array[i] < source_array[j]:
+                source_array[j], source_array[i] = source_array[i], source_array[j]
+    return source_array
