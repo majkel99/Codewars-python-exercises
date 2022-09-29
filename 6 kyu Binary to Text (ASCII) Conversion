@@ -1,0 +1,10 @@
+def binary_to_string(binary):
+    if(not binary):
+        return ""
+    binary_values = [binary[i:i + 8] for i in range(0, len(binary), 8)]
+    ascii_string=""
+    for binary_value in binary_values:
+        an_integer=int(binary_value,2)
+        ascii_character=chr(an_integer)
+        ascii_string+=ascii_character
+    return ascii_string
