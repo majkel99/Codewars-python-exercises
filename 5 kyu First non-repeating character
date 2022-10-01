@@ -1,0 +1,11 @@
+def first_non_repeating_letter(string):
+    temp=0
+    string2=string.lower()
+    if(len(string)==1 or len(string)==0):
+        return string
+    for word in string2:
+        for word2 in string2.replace(string2[temp],'',1):
+            if word not in string2.replace(string2[temp],'',1):
+                return string[temp]
+        temp+=1
+    return ''
