@@ -1,0 +1,8 @@
+def first_dup(s):
+    s2=s
+    for word in s:
+        s2=s2[1:]
+        for word2 in s2:
+            if word==word2:
+                return word
+    return None
